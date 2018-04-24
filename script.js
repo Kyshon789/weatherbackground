@@ -1,8 +1,7 @@
 $(document).ready(function() {
     $("#button").click(function() {
-        $("#search")
-        var message = $("#search").val();
-        console.log(message)
+        var zipcode = $("#search").val();
+        searchbyzipcode(zipcode);
     });
     $.ajax({
         url: "https://api.wunderground.com/api/db98605a355b736f/geolookup/conditions/q/IA/Cedar_Rapids.json",
@@ -15,12 +14,21 @@ $(document).ready(function() {
         }
     });
 });
-
-
-$("#button").click(function() {
-    var message = $("#search").val();
-});
-$("div").append("");
+function searchbyzipcode(zipcode) { 
+    $.ajax({
+        url:"https://api.wunderground.com/api/db98605a355b736f/geolookup/q/"+zipcode+ ".json",
+        method: "GET",
+        success: function(response){
+            console.log(response);
+        }
+    })
+}
+ 
+        
+// $("#button").click(function() {
+//     var message = $("#search").val();
+// });
+// $("div").append("");
 
 // function GetRandomWeatherChoice() {
 //   var weather = ["Rain",  "snow", "Windy", "Sunny", "stormy"];
