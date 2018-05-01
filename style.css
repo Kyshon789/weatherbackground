@@ -1,38 +1,45 @@
-/*    body {*/
-/*    background: url("pics/rain1.jpg");*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
+    body {
+    background: url("pics/rain1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     
-/*}*/
-/*    body{*/
-/*        background:url("pics/sunny1.jpg");*/
-/*        background-repeat: no-repeat;*/
-/*        background-size: cover;*/
-/*    }*/
+}
+    body{
+        background:url("pics/sunny1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     
     a{ color: yellow
         
     }
-    /* The animation code */
-@keyframes background {
-    from {background:  "pics/rain2.jpg";}
-     to {background: "pics/sunny1.jpg";}
-}
+/*     The animation code */
+/*@keyframes background {*/
+/*    from {background:  "pics/rain2.jpg";}*/
+/*     to {background: "pics/sunny1.jpg";}*/
+/*}*/
 
 /* The element to apply the animation to */
-body {
-     width: 100px;
-    height: 100px;
-   background: url("pics/rain2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+/*body {*/
+/*     width: 100px;*/
+/*    height: 100px;*/
+/*   background: url("pics/rain2.jpg");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
 
-    background:url("pics/sunny1.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
+/*    background:url("pics/sunny1.jpg");*/
+/*        background-repeat: no-repeat;*/
+/*        background-size: cover;*/
  
  
-    animation-name: background;
-    animation-duration: 4s;
-     animation-iteration-count: infinite;
-}
+/*    animation-name: background;*/
+/*    animation-duration: 4s;*/
+/*     animation-iteration-count: infinite;*/
+/*}*/
+/*/div { */
+/*    width: 400px;*/
+/*    height: 400px;*/
+/*    background-repeat: no-repeat, repeat;*/
+/*    background-image: url("pics/rain2.jpg"), url("pics/sunny1.jpg");*/
+/*    background-blend-mode: luminosity;*/
+/*}*/

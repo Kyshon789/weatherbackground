@@ -10,7 +10,7 @@ $(document).ready(function() {
             var location = parsed_json['location']['city'];
             var temp_f = parsed_json['current_observation']['temp_f'];
             alert("Current temperature in " + location + " is: " + temp_f);
-
+            $.ajax(requestUtl["location"]);
         }
     });
 });
@@ -19,7 +19,7 @@ function searchbyzipcode(zipcode) {
         url:"https://api.wunderground.com/api/db98605a355b736f/geolookup/q/"+zipcode+ ".json",
         method: "GET",
         success: function(response){
-            console.log(response);
+            console.log(response["location"]["city"]);
         }
     })
 }
