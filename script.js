@@ -31,45 +31,29 @@ function getforcast(city,state){
         success: function(response){
             console.log(response)
         $("#box").text(response['current_observation']['temp_f']);
-        $("#box2").text(response['current_observation']['icon']);
-        Getimagebytemperture(response['current_observation']['temp_f']);
+        $("#box2").text(response['current_observation']['weather']);
+        // Getimagebytemperture(response['current_observation']['temp_f']);
+        Getimagebyweather(response['current_observation']['weather'].toLowerCase());
         }
     })
     
 }
 
         
-// $("#button").click(function() {
-//     var message = $("#search").val();
-// });
-// $("div").append("");
 
-function Getimagebytemperture(temp) {
-  if (temp < 70){
-     changebackground("rain1");
-     }else{
-         changebackground("sunny1");
-     }
-     
- 
-}
+
+function Getimagebyweather(weather) {
+  if (weather === "sunny" ){
+     changebackground("sunny1");
+     }else if (weather === "Overcast"){
+         changebackground("cloudy");
+     }else if(weather === "mostly cloudy"){
+   changebackground("cloudy");
+     }else if (weather === "rain"){
+    changebackground("rain1");}
+ }
+
 function changebackground(image) { 
     $("body").css("background-image","url(pics/"+image +".jpg)");
     
 }
-
-//  backgroundChange
-// function updatebackground (){
-//         // document.getElementById("airPlane").src 
-//             if(CURRENTENVIRONMENT.appearance=== "rain"){
-//                 backgroundChange("rain1.jpg")
-//             } else if(CURRENTENVIRONMENT.appearance=== "Sunny"){
-//                 backgroundChange("sunny1.jpg")
-//             } else if(CURRENTENVIRONMENT.appearance=== "Snow"){
-//                 backgroundChange("snow1.jpg")
-//             }  else if(CURRENTENVIRONMENT.appearance=== "Windy"){
-//             backgroundChange("windy1.jpg")
-//             } else if(CURRENTENVIRONMENT.appearance=== "stormy"){
-//               backgroundChange("stormy.jpg")
-//             }
-// }

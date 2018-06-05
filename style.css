@@ -1,9 +1,4 @@
-    body {
-    background: url("pics/rain1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
+  
     body{
         background:url("pics/sunny1.jpg");
         background-repeat: no-repeat;
@@ -13,6 +8,12 @@
     a{ color: yellow
         
     }
+   div {
+    width: 100px;
+    height: 100px;
+   color: red
+}
+    
 /*     The animation code */
 /*@keyframes background {*/
 /*    from {background:  "pics/rain2.jpg";}*/
